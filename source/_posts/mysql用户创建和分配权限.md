@@ -1,7 +1,7 @@
 ---
 title: mysql用户创建和分配权限
 date: 2018-08-21 16:31:38
-tags:mysql
+tags: mysql
 ---
 
 
