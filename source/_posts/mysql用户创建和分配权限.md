@@ -7,7 +7,7 @@ tags: mysql
 
 ### Mysql 创建用户和分配权限
 
-> 创建用户
+> 1. 创建用户
 
 ```mysql
 CREATE USER 'username'@'host' IDENTIFIED BY 'password';
@@ -24,14 +24,34 @@ CREATE USER 'username'@'host' IDENTIFIED BY 'password';
 	set global validate_password_policy=0;
 ```
 
-> 分配权限
+> 2. 分配权限
 
 ```mysql
 GRANT (all,select,insert,update) privileges ON databasename.tablename TO 'username'@'host' identified by 'password';
 ```
 
-- privileges - 用户的操作权限,如SELECT , INSERT , UPDATE 等(详细列表见该文最后面).如果要授予所的权限则使用ALL.;databasename - 数据库名,tablename-表名,如果要授予该用户对所有数据库和表的相应操作权限则可用*表示, 如*.*.
+- privileges 用户的操作权限,如SELECT , INSERT , UPDATE 等(详细列表见该文最后面).如果要授予所的权限则使用ALL.;
+databasename - 数据库名,tablename-表名,如果要授予该用户对所有数据库和表的相应操作权限则可用*表示, 如 *.*.
+
 
 ```mysql
 flush privileges;
+```
+
+###  example 
+    
+```mysql
+
+    ## 查看所有用户
+    select * from mysql.user；
+    ##  创建拥有全部权限的用户
+    GRANT all privileges ON *.* TO 'test'@'%' identified by 'pwd';
+    ##  创建拥有查看权限的用户
+    GRANT select privileges ON *.* TO 'test'@'%' identified by 'pwd';
+    ##  创建只拥有查看 test 数据库 user 表数据的 权限的用户
+    GRANT select privileges ON test.user TO 'test'@'%' identified by 'pwd';
+    
+    ## 执行刷新
+    flush privileges;
+
 ```
