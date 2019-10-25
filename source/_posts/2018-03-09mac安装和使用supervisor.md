@@ -5,6 +5,12 @@ tags: 工具
 ---
 ##
 
+命令
+
+- sudo supervisorctl status   查看状态
+- sudo supervisorctl reload   重启
+
+
 1.安装和启动supervisor
 
 ```bash
@@ -53,4 +59,4 @@ stdout_logfile=/Users/facevisa/my/laravel//storage/logs/queue_mm.log //日志文
 参考第三步，取消注释；如无提示，就ok
 ```
 
-7、至此，就安装成功了
+6. 至此，就安装成功了
