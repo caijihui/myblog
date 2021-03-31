@@ -11,6 +11,9 @@
     ## 创建新文章
     hexo new title
     
+    ## 创建文章 此处加了日期
+    hexo new $(date +"%Y-%m-%d")."title"
+    
     ## 发布
     hexo d -g
     

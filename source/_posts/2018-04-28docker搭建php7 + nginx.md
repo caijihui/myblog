@@ -31,7 +31,7 @@ tags: [docker,nginx]
     }
     location ~ \.php(.*)$ {
       root   /var/www/html/;
-      fastcgi_pass 172.17.0.2:9000;
+      fastcgi_pass myphp:9000;
       fastcgi_index index.php;
       fastcgi_split_path_info ^((?U).+\.php)(/?.+)$;
       fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;

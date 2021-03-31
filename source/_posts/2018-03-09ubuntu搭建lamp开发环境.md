@@ -1,7 +1,7 @@
 ---
 title: ubuntu搭建lamp开发环境
 date: 2018-03-09 15:12:00
-tags: 工具
+tags: [工具,lamp]
 ---
 
 1.安装apache2  :
