@@ -4,13 +4,37 @@ date: 2021-01-12 14:48:25
 tags:
 ---
 
+### Redis相比memcached有哪些优势
+
+- 都是基于内存(memory)键-值(key-value)数据库
+- 支持数据类型比较多
+- redis可以持久化其数据 主从和哨兵
+
+
+
+
+
+
+### Redis是单线程的，但Redis为什么这么快？
+
+- 完全基于内存，
+- 采用单线程，没有线程切换的消耗
+- 数据结构比较简单
+- Redis的瓶颈最有可能是机器内存的大小或者网络带宽
+
+
+
+
+默认方式：
+Redis服务器默认开启RDB，关闭AOF；
+要开启AOF，需要在配置文件中配置： appendonly yes
+
 
 ### RDB （redis database）
     
 - 二进制文件dump.rdb
 -  save方式 save 300 10  （300s 内有10次改动 就save ）
 -  bgsave 
-
 
 
 ### AOF （append only file）
@@ -25,3 +49,15 @@ tags:
 假设Redis 同时打开了RDB和AOF持久化功能，当Redis重启的时候会优先加载AOF，因为AOF数据更新的频率更高，会保存更新的数据。
   
 rdb 更快，实时性。
+
+
+## redis 主从集群和哨兵机制
+
+【Redis专题：深入解读哨兵模式】
+
+
+
+
+
+
+

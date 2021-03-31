@@ -1,0 +1,50 @@
+---
+title: Linux常用命令
+date: 2021-03-17 13:35:16
+tags:
+---
+
+### Centos.linux 服务器时区切换
+- tzselect->  cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
+
+
+### Vim 操作 
+ - 格式化：gg=G
+ - 格式化n行：n==
+ - 复制： 2yy    
+ - 粘贴： p
+ - 删除列的方法
+ 
+     ```
+        1 Ctrl + v(j/k 上下选择。左右选择多列)
+        2 G 全选所有行
+        3 按下x 即可删除对应列
+     ```
+
+### 获取某些进程并kill掉
+- ps aux | grep "play" | cut -c 17-22 | xargs kill -9
+
+
+### 重启supervisor
+
+- sudo supervisorctl reload
+
+### Linux 统计：
+
+``` 
+rep -o include  sms.com| wc -l
+cat sms.com | grep -o fastcgi | wc -l
+cat api.access.log | awk '{print $1}' | sort|uniq > a.txt
+分割：
+awk -F200 '{print $5}' app.access.log  ##指定200分割
+awk '{print $7}' app.access.log |sort|uniq > a.txt ##分割默认空格,统计
+Find  / -name 'ss*'
+
+```
+
+软连接命令  ln -s /application/system/php7/bin/php /usr/local/bin/php7
+
+###  mac 使用Chrome生成pdf
+
+-  /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome 
+- --headless --disable-gpu --print-to-pdf=220.pdf https://mo.fish/main/home/hot
