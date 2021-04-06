@@ -11,6 +11,11 @@
     ## 创建新文章
     hexo new title
     
+    ## 新建about
+    hexo new page "about"
+    hexo new page "tags"
+    hexo new page "categories"
+    
     ## 创建文章 此处加了日期
     hexo new $(date +"%Y-%m-%d")."title"
     

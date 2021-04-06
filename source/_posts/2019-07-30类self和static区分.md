@@ -1,7 +1,7 @@
 ---
 title: 类 self和static区分
 date: 2019-07-30 09:48:14
-tags:
+tags: Class
 ---
 
 类的静态延迟绑定

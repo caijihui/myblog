@@ -2,7 +2,7 @@
 layout: docker-learn
 title: 搭建lnmp
 date: 2019-03-22 15:22:48
-tags: [docker,lnmp,docker-compose]
+tags: [docker,lnmp]
 ---
 
 ## docker file learn 
