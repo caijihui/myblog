@@ -3,7 +3,7 @@ title: mac安装和使用supervisor
 date: 2018-03-09 15:02:05
 tags: 工具
 ---
-##
+##  supervisor 步骤
 
 命令
 
@@ -11,14 +11,14 @@ tags: 工具
 - sudo supervisorctl reload   重启
 
 
-1.安装和启动supervisor
+1. 安装和启动supervisor
 
 ```bash
     brew install supervisor
     brew services start supervisor
   ```
 
-2.修改配置文件
+2. 修改配置文件
 
 ```bash
     vi /usr/local/etc/supervisord.ini
@@ -29,7 +29,7 @@ tags: 工具
     password=123               ; default is no password (open server)
 ```
 
-3.创建进程任务
+3. 创建进程任务
 
 ```创建目录和文件
 mkdir supervisor.d      
@@ -47,12 +47,12 @@ redirect_stderr=true
 stdout_logfile=/Users/facevisa/my/laravel//storage/logs/queue_mm.log //日志文件
 ```
 
-4.重启服务
+4. 重启服务
 ```bash   
   brew services restart supervisor
 ```
 
-5.测试   
+5. 测试   
 ```
 在命令行输入   supervisorctl    
 如果出现  http://localhost:9001 refused connection   
