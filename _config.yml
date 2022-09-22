@@ -87,6 +87,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo1: https://github.com/caijihui/caijihui.github.io.git
-  repo: https://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@github.com/caijihui/caijihui.github.io.git
+  repo: https://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@github.com/caijihui/caijihui.github.io.git
   branch :  master

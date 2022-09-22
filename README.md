@@ -26,4 +26,14 @@
 
 ## 注意的⚠️
 -       `##`   `###`  才展示目录
+
+## 常见问题
+remote: Support for password authentication was removed on August 13, 2021.
+
+github 不支持账号密码提交了，需要生成个人token
+
+## 生成index为空
+ 解决方式: 
+    1. 升级hexo 版本
+    2. 检查npm
  

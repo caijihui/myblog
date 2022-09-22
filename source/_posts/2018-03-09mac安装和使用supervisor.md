@@ -2,6 +2,7 @@
 title: mac安装和使用supervisor
 date: 2018-03-09 15:02:05
 tags: 工具
+categories: mac工具
 ---
 ##  supervisor 步骤
 
